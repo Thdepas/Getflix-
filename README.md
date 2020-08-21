@@ -9,23 +9,35 @@
   - frontend: 1
   - backend: 2
   - project management : 1
-  
-
-## Mission objectives 
-
-Now is the time to take stock of everything you've learned so far and add a layer at the same time! 
-
-And what could be better for this than putting it into practice :)
-
-## The Mission
-
-In this exercise you must create a Streaming site in html / css, javascript and php.
-
-Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... The goal is to display a catalog of movies. Spot the similarities between these platforms (navbar, header, search tool, different categories of videos…) See what is cool and what works.
 
 # Project Title
 
 Get the flix up !
+
+## Context 
+
+After 2.5 month at BeCode
+
+## Mission objectives 
+
+Practice with everything we have learn so far
+
+## The Mission
+
+Create a Streaming site in html / css, javascript and php.
+
+Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... The goal is to display a catalog of movies. Spot the similarities between these platforms (navbar, header, search tool, different categories of videos…) See what is cool and what works.
+
+## First step
+
+- Organise our work
+
+    - Make a trello
+
+    - Make a figma 
+
+- Make a film database
+
 
 ## Deployment
 
