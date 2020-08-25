@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("connectdb.php"); 
+include('/var/www/html/getflix/scripts/connectdb.php'); 
 ?>
 <!DOCTYPE html>
 <html lang = "en">
@@ -21,4 +21,4 @@ while ($donnees = $reponse->fetch())
 $reponse->closeCursor();
 ?>
 </body>
-</html>
+</html> 

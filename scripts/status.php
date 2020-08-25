@@ -1,5 +1,5 @@
 <?php
-include("connectdb.php");
+include("/var/www/html/getflix/scripts/connectdb.php");
 $status = "guest";
 if ($_SESSION['id'] == NULL) {
 } else { 
@@ -12,8 +12,5 @@ if ($_SESSION['id'] == NULL) {
     }else{
         $status = "admin";
     }
-    
-
 }
-
-?>
+?> 

@@ -1,5 +1,6 @@
 <?php
-include("connectdb.php"); 
+include("/var/www/html/getflix/scripts/connectdb.php"); 
+//echo getcwd();
 
 if(isset($_POST["email"], $_POST["password"])) 
     {    
@@ -18,13 +19,13 @@ if(isset($_POST["email"], $_POST["password"]))
             if ($isPasswordCorrect) {
                 $_SESSION['id'] = $result['id'];
                 $_SESSION['email'] = $result['email'] ;
-                header('Location: home.php');
+                header('Location: /var/www/html/getflix/home/home.php');
             }
             else {
                 echo 'Wrong email or password !!';
             }
         }
     }
-
+ 
 ?>
 

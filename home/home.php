@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include("status.php"); 
+include('/var/www/html/getflix/scripts/status.php'); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@ include("status.php");
 </head>
 <body>
 <?php 
-include("navbar.php"); 
+include('/var/www/html/getflix/home/navbar.php'); 
 ?>
 </body>
 </html>

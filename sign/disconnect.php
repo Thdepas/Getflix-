@@ -6,9 +6,9 @@ $_SESSION = array();
 session_destroy();
 
 // Redirection du visiteur 
-header('Location: home.php');
+header('Location: /var/www/html/getflix/home/home.php');
 
 // Suppression des cookies de connexion automatique
 //setcookie('login', '');
 //setcookie('pass_hache', '');
-?>
+?> 
