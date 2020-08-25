@@ -9,16 +9,17 @@ include('/var/www/html/getflix/scripts/connectdb.php');
       </head>
     <body>
         <h2>Sign Up</h2> 
+        <a href = "/getflix/home/home.php"><button type="button">Click Me!</button></a>
 <?php
-
 $reponse = $bdd->query('SELECT firstname,lastname FROM user ORDER BY id DESC LIMIT 1');
 
-while ($donnees = $reponse->fetch())
-{ 
-    echo "Welcome ". htmlspecialchars($donnees['firstname']) . " " . htmlspecialchars($donnees['lastname'] . "!" );
-}
+$donnees = $reponse->fetch();
+
+echo "Welcome ". htmlspecialchars($donnees['firstname']) . " " . htmlspecialchars($donnees['lastname'] . "!" );
+
 
 $reponse->closeCursor();
 ?>
+
 </body>
 </html> 

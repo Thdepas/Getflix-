@@ -7,7 +7,6 @@ if(isset($_POST["email"], $_POST["password"]))
         $req->execute(array('email' => $email));
         $result = $req->fetch();
         $isPasswordCorrect = password_verify($_POST['password'], $result['password']);
-        
         if (!$result)
         {
             echo 'Wrong email & password!';
