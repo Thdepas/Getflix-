@@ -32,7 +32,7 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
 
 - Organise our work
 
-    - Make a trello
+    - Make a trello --> https://trello.com/b/00MYy9Xa/netp
 
     - Make a figma 
 
