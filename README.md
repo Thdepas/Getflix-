@@ -4,7 +4,7 @@
 - Duration: `?`
 - Deadline: `?`
 - Deployment strategy :
-  - Like you want
+  - ?
 - Team challenge :  Nathalie - Elodie - Thomas - Phuong (N.E.T_P)
   - frontend: 1
   - backend: 2
@@ -12,7 +12,7 @@
 
 # Project Title
 
-Get the flix up !
+N.E.T_P
 
 ## Context 
 
