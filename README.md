@@ -47,7 +47,13 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
 
 - First step done
 - Begin to code all together with "live share" (vs code)
-- User login done
+- User login begin
+
+## Second day
+
+- 
+- 
+- 
 
 ## Deployment
 
