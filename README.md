@@ -35,6 +35,7 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
     - Make a trello --> https://trello.com/b/00MYy9Xa/netp
 
     - Make a figma 
+     ![figma](https://user-images.githubusercontent.com/66432325/91146263-ef36be00-e6b6-11ea-8144-30c5f2134722.gif)
 
 - Make database
   
