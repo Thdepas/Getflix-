@@ -36,8 +36,17 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
 
     - Make a figma 
 
-- Make a film database
+- Make database
+  
+  - Film db
+  
+  - User db
 
+## First day
+
+- First step done
+- Begin to code all together with "live share" (vs code)
+- User login done
 
 ## Deployment
 
