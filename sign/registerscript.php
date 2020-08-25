@@ -1,7 +1,6 @@
 <?php
 session_start();
-include("connectdb.php"); 
-echo getcwd();
+include("/var/www/html/getflix/scripts/connectdb.php"); 
 $defaultStatus = "member";
 
 if (isset($_SESSION["firstname"]) AND isset($_SESSION["lastname"]) AND isset($_POST["email"]) AND isset($_POST["password"])) {
@@ -17,7 +16,7 @@ $req->execute(array(
     $req->closeCursor();
 }
     // Redirection du visiteur 
-    //header('Location: signup3.php');
+    header('Location: /getflix/sign/signup3.php');
 ?>
  
 
