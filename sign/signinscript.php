@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("/var/www/html/getflix/scripts/connectdb.php"); 
 if(isset($_POST["email"], $_POST["password"])) 
     {    
@@ -17,6 +18,7 @@ if(isset($_POST["email"], $_POST["password"]))
                 $_SESSION['id'] = $result['id'];
                 $_SESSION['email'] = $result['email'] ;
                 header('Location: /getflix/home/home.php');
+                //include("/var/www/html/getflix/scripts/status.php"); 
             }
             else {
                 echo 'Wrong email or password !!';
@@ -26,3 +28,4 @@ if(isset($_POST["email"], $_POST["password"]))
  
 ?>
 
+ 

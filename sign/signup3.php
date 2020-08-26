@@ -9,6 +9,7 @@ include('/var/www/html/getflix/scripts/connectdb.php');
       </head>
     <body>
         <h2>Sign Up</h2> 
+        <?php include("/var/www/html/getflix/scripts/connectdb.php");?>
         <a href = "/getflix/home/home.php"><button type="button">Click Me!</button></a>
 <?php
 $reponse = $bdd->query('SELECT firstname,lastname FROM user ORDER BY id DESC LIMIT 1');
@@ -20,6 +21,5 @@ echo "Welcome ". htmlspecialchars($donnees['firstname']) . " " . htmlspecialchar
 
 $reponse->closeCursor();
 ?>
-
 </body>
-</html> 
+</html>  

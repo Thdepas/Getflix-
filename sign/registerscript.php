@@ -18,6 +18,6 @@ $req->execute(array(
     // Redirection du visiteur 
     header('Location: /getflix/sign/signup3.php');
 ?>
+
+
  
-
-

@@ -12,5 +12,4 @@ if ($_SESSION['id'] == NULL) {
     }else{
         $status = "admin";
     }
-}
-?> 
+} 

@@ -22,5 +22,4 @@ $_SESSION['lastname'] = $_POST['lastname'];
         <script src="passwordvalidation.js"></script>
     </body>
 </html>
-
  
