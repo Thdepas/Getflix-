@@ -66,8 +66,4 @@ include('/var/www/html/getflix/home/navbar.php');
   
 
 </body>
-<<<<<<< HEAD
 </html> 
-=======
-</html>
->>>>>>> 753afef5f46c17868cd07dd19cf5bc8a974aad50
