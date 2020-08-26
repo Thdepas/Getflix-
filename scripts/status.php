@@ -12,4 +12,8 @@ if ($_SESSION['id'] == NULL) {
     }else{
         $status = "admin";
     }
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 753afef5f46c17868cd07dd19cf5bc8a974aad50

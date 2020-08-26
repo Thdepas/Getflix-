@@ -46,13 +46,15 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
 ## First day
 
 - First step done
+- Set up the same docker for every member of the team so we can work together
 - Begin to code all together with "live share" (vs code)
 - User login begin
 
+
 ## Second day
 
-- 
-- 
+- Still coding together on the differents sessions
+- We took some time to fine a little mistake
 - 
 
 ## Deployment
@@ -61,6 +63,8 @@ A voir
 
 ## Built With
 
+* [Html]
+* [CSS]
 * [Boostrap]
 * [PHP]
 * [JS]
