@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 $_SESSION['firstname'] = $_POST['firstname'];
 $_SESSION['lastname'] = $_POST['lastname'];

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("/var/www/html/getflix/scripts/connectdb.php");
-
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,10 +14,10 @@ include("/var/www/html/getflix/scripts/connectdb.php");
 <body>
 <h2>Dashboard</h2> 
 
-<a class="btn btn-dark" href='/getflix/dashboard/dashboarduser.php' role="button">Modify users database</a>
-<a class="btn btn-dark" href='/getflix/dashboard/dashboardmovies.php' role="button">Modify movies database</a>
-<a class="btn btn-dark" href='/getflix/dashboard/dashboardcomments.php' role="button">Modify comment database</a>
-
+<a class="btn btn-dark" href='/getflix/dashboard/user/dashboarduser.php' role="button">Modify users database</a>
+<a class="btn btn-dark" href='/getflix/dashboard/movies/dashboardmovies.php' role="button">Modify movies database</a>
+<a class="btn btn-dark" href='/getflix/dashboard/comments/dashboardcomments.php' role="button">Modify comment database</a>
+<a class='btn btn-dark'  role='button' href='/getflix/home/home.php'>Back</a>
 <!--JS Scripts-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

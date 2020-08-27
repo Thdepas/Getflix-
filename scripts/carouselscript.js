@@ -1,5 +1,5 @@
 /*
-    Carousel
+    Carousel 
 */
 $('#carousel-example').on('slide.bs.carousel', function (e) {
     /*

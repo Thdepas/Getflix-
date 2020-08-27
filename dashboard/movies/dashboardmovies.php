@@ -1,7 +1,6 @@
 <?php
 session_start();
 include("/var/www/html/getflix/scripts/connectdb.php");
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,50 +12,47 @@ include("/var/www/html/getflix/scripts/connectdb.php");
 </head>
 <body>
 <?php
-$reponse = $bdd->query('SELECT status, id, firstname, lastname, email FROM user ORDER BY id ASC ');
+$reponse = $bdd->query('SELECT  id, title, director, genre, year, length, synopsis, rating, trailer FROM movies ORDER BY id ASC ');
 ?>
-<table class="table">
+<a class='btn btn-dark'  role='button' href='/getflix/dashboard/dashboard.php'>Back</a>
+<a class='btn btn-dark'  role='button' href='/getflix/dashboard/movies/moviesadd.php'>Add</a>
+<table class="table">  
     <thead>
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">First name</th>
-            <th scope="col">Last name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Status</th>
+            <th scope="col">Title</th>
+            <th scope="col">Director</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Year</th>
         </tr>
     </thead>
     <tbody>
 <?php
+
+
 // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
 while ($donnees = $reponse->fetch())
 { 
 echo    
 
-                '<tr>
-                <td>' . htmlspecialchars($donnees['id']) .'</td>
-                <td>'  . htmlspecialchars($donnees['firstname']) .
-                " </td><td>"  .  htmlspecialchars($donnees['lastname']) .
-                " </td><td>" . htmlspecialchars($donnees['email']) .'</td>'.
-                " </td><td>" . htmlspecialchars($donnees['status']) .'</td>'.
-                '</tr>'
+                "<tr><td>"      . htmlspecialchars($donnees['id']) .
+                "</td><td>"     . htmlspecialchars($donnees['title']) .
+                "</td><td>"     . htmlspecialchars($donnees['director']) .
+                "</td><td>"     . htmlspecialchars($donnees['genre']) .
+                "</td><td>"     . htmlspecialchars($donnees['year']).
+                "</td><td>"    . "<a class='btn btn-dark' role='button' href='/getflix/dashboard/movies/moviesedit.php?id=". $donnees['id']."'>Edit</a>" .
+                "</td><td>"    . "<a class='btn btn-dark'  role='button' href='/getflix/dashboard/movies/moviesdelete.php?id=". $donnees['id']."'>Delete</a>" .
+                "</td></tr>"
         ;
 
-}?>
-
-
-
-
+}
+$reponse->closeCursor();
+?>
 
 
     </tbody>
 </table>
-
-<?php
-
-$reponse->closeCursor();
-
-?>
-
+<a class='btn btn-dark'  role='button' href='/getflix/dashboard/dashboard.php'>Back</a>
      <!--JS Scripts-->
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -64,7 +60,6 @@ $reponse->closeCursor();
     <script
       src="/getflix/scripts/carouselscript.js"
     ></script>
-  
 
 </body>
 </html> 

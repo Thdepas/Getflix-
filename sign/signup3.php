@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 include('/var/www/html/getflix/scripts/connectdb.php'); 
 ?>

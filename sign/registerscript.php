@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); 
 include("/var/www/html/getflix/scripts/connectdb.php"); 
 $defaultStatus = "member";
 

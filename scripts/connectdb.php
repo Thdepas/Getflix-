@@ -1,5 +1,5 @@
 <?php
-// Connexion à la base de données
+// Connexion à la base de données 
 try
 {
 	$bdd = new PDO('mysql:host=mysql-server;dbname=getflix;charset=utf8','root', 'secret');
