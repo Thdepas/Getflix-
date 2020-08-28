@@ -2,6 +2,8 @@
     code by Iatek LLC 2018 - CC 2.0 License - Attribution required
     code customized by Azmind.com 
 */
+
+
 @media (min-width: 768px) and (max-width: 991px) {
     /* Show 4th slide on md if col-md-4*/
     .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
@@ -12,6 +14,7 @@
         display: block;
         visibility: visible;
     }
+
 }
 @media (min-width: 576px) and (max-width: 768px) {
     /* Show 3rd slide on sm if col-sm-6*/
@@ -22,7 +25,9 @@
         z-index: -1;
         display: block;
         visibility: visible;
+        
     }
+
 }
 @media (min-width: 576px) {
     .carousel-item {
@@ -67,6 +72,8 @@
         display: block;
         visibility: visible;
     }
+
+
 }
 /* MD */
 @media (min-width: 768px) {
@@ -95,10 +102,13 @@
         display: block;
         visibility: visible;
     }
+
+
 }
 /* LG */
 @media (min-width: 991px) {
     /* show 4th item */
+  
     .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
         display: block;
     }
@@ -128,4 +138,7 @@
         display: block;
         visibility: visible;
     }
+
+
 }
+

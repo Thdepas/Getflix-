@@ -13,5 +13,4 @@ switch($status){
         break;
     default : echo "<a href='/getflix/index.html'>Sign in/up</a>";
 }
-
 ?>  

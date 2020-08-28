@@ -12,23 +12,37 @@ include("/var/www/html/getflix/scripts/connectdb.php");
 </head>
 <body>
 <?php
-$reponse = $bdd->query('SELECT  id, title, director, genre, year, length, synopsis, rating, trailer FROM movies ORDER BY id ASC ');
+
+
+$sort = $_GET['sort'];
+$order = $_GET['order'];
+
+$sql = 'SELECT  * FROM movies ORDER BY '. $sort .' '.$order;
+
+if ($order=="ASC") {
+    $order = "DESC";
+} else {
+    $order = "ASC";
+}
+
+$reponse = $bdd->query($sql);
 ?>
 <a class='btn btn-dark'  role='button' href='/getflix/dashboard/dashboard.php'>Back</a>
 <a class='btn btn-dark'  role='button' href='/getflix/dashboard/movies/moviesadd.php'>Add</a>
 <table class="table">  
     <thead>
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Title</th>
-            <th scope="col">Director</th>
-            <th scope="col">Genre</th>
-            <th scope="col">Year</th>
+            <th><a href="/getflix/dashboard/movies/dashboardmovies.php?sort=id&order=<?php echo $order ?>">ID</a></th>
+            <th><a href="/getflix/dashboard/movies/dashboardmovies.php?sort=title&order=<?php echo $order ?>">Title</a></th>
+            <th><a href="/getflix/dashboard/movies/dashboardmovies.php?sort=director&order=<?php echo $order ?>">Director</a></th>
+            <th><a href="/getflix/dashboard/movies/dashboardmovies.php?sort=genre&order=<?php echo $order ?>">Genre</a></th>
+            <th><a href="/getflix/dashboard/movies/dashboardmovies.php?sort=year&order=<?php echo $order ?>">Year</a></th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
 <?php
-
 
 // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
 while ($donnees = $reponse->fetch())

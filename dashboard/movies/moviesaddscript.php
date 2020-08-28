@@ -1,10 +1,10 @@
 <?php
-include("/var/www/html/getflix/scripts/edit.php");
+include("/var/www/html/getflix/scripts/add.php"); 
 
 if (isset($_POST["title"]) AND isset($_POST["director"]) AND isset($_POST["genre"]) AND isset($_POST["year"])  AND isset($_POST["length"]) AND isset($_POST["synopsis"]) AND isset($_POST["rating"]) AND isset($_POST["trailer"]) ) {
     $table = "movies";
+    $header = "dashboard/movies/dashboardmovies.php";
     $array = array(
-        'id'=> $_POST['id'],
         'title' => $_POST['title'],
         'director' => $_POST['director'],
         'genre' => $_POST['genre'],
@@ -14,11 +14,8 @@ if (isset($_POST["title"]) AND isset($_POST["director"]) AND isset($_POST["genre
         'rating' => $_POST['rating'],
         'trailer' => $_POST['trailer'],
         );
-    $header ="dashboard/movies/dashboardmovies.php?sort=id&order=ASC";
-    edit($table, $array, $header);
-} else {
-    echo "Missing informations";
-}
 
-?>  
-  
+    add($table, $array, $header); 
+} else { echo "Missing informations";}
+
+?>
