@@ -1,127 +1,119 @@
-<?php 
+<?php
 session_start();
-
-?>  
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="/getflix/css/style.css" />-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/getflix/css/carousel.css" />
     <link rel="stylesheet" href="/getflix/css/styles.css" />
-  <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <title>N.E.T_P</title>
 </head>
+
 <body>
-<?php
-include('/var/www/html/getflix/home/navbar.php'); 
-?>
-<!-- Top content -->
-<!--<div class="top-content">
-    <div class="container-fluid">-->
-        
+    <div class="container-fluid">
+        <?php
+        include('/var/www/html/getflix/home/navbar.php');
 
-            <?php
-            /*function makeCarousel($nbrOfCover,$sort, $id) {
-                include("/var/www/html/getflix/scripts/connectdb.php");
-                $sql = 'SELECT id FROM movies ORDER BY '. $sort.' LIMIT '.$nbrOfCover;
-                $req = $bdd->prepare($sql);
-                $req->execute();
-                $entryCarousel1=[];
-                echo  "<div id=" . $id . " class='carousel slide' data-ride='carousel'>
-                    <div class='carousel-inner row w-100 mx-auto' role='listbox'>";
-                while ($result = $req->fetch()) {  
-                    array_push($entryCarousel1,$result['id']);
-                        if ($entryCarousel1[0]==$result['id']){
-                            echo '<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-                            <img src="/getflix/img/'.$result['id'].'.jpg" class="img-fluid mx-auto d-block coverCarousel" alt="img'.$result['id'].'">
-                            </div>';
-                        } else{
-                            echo '<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                            <img src="/getflix/img/'.$result['id'].'.jpg" class="img-fluid mx-auto d-block coverCarousel" alt="img'.$result['id'].'">
-                            </div>';}
+        function makeCarousel($nbrOfCover, $sort, $id)
+        {
+            include("/var/www/html/getflix/scripts/connectdb.php");
+            $sql = 'SELECT id, title FROM movies ORDER BY ' . $sort . ' DESC LIMIT ' . $nbrOfCover;
+            $req = $bdd->prepare($sql);
+            $req->execute();
+            $entryCarousel1 = [];
+            $echoCarousel = "<div id=" . $id . " class='carousel slide my-3' data-interval='false'>
+                                    <div class='carousel-inner row w-100 mx-auto' role='listbox'>";
+            while ($result = $req->fetch()) {
+                array_push($entryCarousel1, $result['id']);
+                if ($entryCarousel1[0] == $result['id']) {
+                    $echoCarousel .= '  <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                                                    <a href="/getflix/movies/movies.php?movieId=' . $result['id'] . '" alt="">
+                                                        <img src="/getflix/img/cover/' . $result['id'] . '.jpg" class="img-fluid mx-auto d-block coverCarousel" alt="' . $result['title'] . ' cover">
+                                                    </a>
+                                                </div>';
+                } else {
+                    $echoCarousel .= '  <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                                    <a href="/getflix/movies/movies.php?movieId=' . $result['id'] . '" alt="">
+                                                        <img src="/getflix/img/cover/' . $result['id'] . '.jpg" class="img-fluid mx-auto d-block coverCarousel" alt="' . $result['title'] . ' cover">
+                                                    </a>
+                                                </div>';
                 }
-                $req->closeCursor();}
-                echo             
-                '</div>
-                <a class="carousel-control-prev" href="#'.$id.'" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#'.$id.'" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>';
-    
-            makeCarousel(8,"year","id1"); 
-            makeCarousel(8,"rating","id2");
-            makeCarousel(8,"id","id3");*/
-            ?>
-    <!--</div>
-</div>-->
+            }
+            $echoCarousel .=    '</div>
+                                        <a class="carousel-control-prev" href="#' . $id . '" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#' . $id . '" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                        </div>';
+            echo $echoCarousel;
+            $req->closeCursor();
+        }
+        //echo "<h2>Top picks for you</h2>";
+        //makeCarousel(8, "id", "firstCarousel");
+        //echo "<h2>Trending Now</h2>";
+        //makeCarousel(8, "rating", "secondCarousel");
+        //echo "<h2>New releases</h2>";
+        //makeCarousel(8, "year", "thirdCarousel");
+        ?>
 
-<div id="carouselExampleControls" class="carousel slide" data-interval="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block coverCarousel" src="/getflix/img/1.jpg" alt="First slide">
+        <?php function makeSwiper($nbrOfCover, $sort, $swiperName) {
+            include("/var/www/html/getflix/scripts/connectdb.php");
+            $sql = 'SELECT id, title FROM movies ORDER BY ' . $sort . ' DESC LIMIT ' . $nbrOfCover;
+            $req = $bdd->prepare($sql);
+            $req->execute();
+
+            $printSwiper = '
+            <div class="netflix-slider mb-3">
+                <h2 class="mb-0">'.$swiperName.'</h2>
+                <div class="swiper-container py-3">
+                    <div class="swiper-wrapper">';
+
+            while ($result = $req->fetch()) {  
+            $printSwiper .= '
+                        <div class="swiper-slide">
+                            <a href="/getflix/movies/movies.php?movieId=' . $result['id'] . '" alt="'.$result['title'].'">
+                                <img src="/getflix/img/cover/'.$result['id'].'.jpg" alt="'.$result['title'].' cover">
+                            </a>
+                        </div>';
+            }
+
+            $printSwiper .= '
+                    </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                </div>
+            </div>';
+            
+            echo $printSwiper;
+        }
+
+        makeSwiper(12, "id", "Top picks for you");
+        makeSwiper(12, "rating", "Trending now");
+        makeSwiper(12, "year", "New releases");
+        ?>
+
     </div>
-    <div class="carousel-item">
-      <img class="d-block coverCarousel" src="/getflix/img/2.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block coverCarousel" src="/getflix/img/3.jpg" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-               
-                <!--<div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-                    <img src="/getflix/img/2.jpg" class="img-fluid mx-auto d-block" alt="img2">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                    <img src="/getflix/img/3.jpg" class="img-fluid mx-auto d-block" alt="img3">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                    <img src="/getflix/img/4.jpg" class="img-fluid mx-auto d-block" alt="img4">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                    <img src="/getflix/img/5.jpg" class="img-fluid mx-auto d-block" alt="img5">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                    <img src="/getflix/img/6.jpg" class="img-fluid mx-auto d-block" alt="img6">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                    <img src="/getflix/img/7.jpg" class="img-fluid mx-auto d-block" alt="img7">
-                </div>
-                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                    <img src="/getflix/img/8.jpg" class="img-fluid mx-auto d-block" alt="img8">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-</div>-->
+
+    <!--JS Scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="/getflix/scripts/carouselscript.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/getflix/scripts/swiperini.js"></script>
 
 </body>
-<!--JS Scripts-->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="/getflix/scripts/carouselscript.js"></script>
 
-</html> 
+</html>

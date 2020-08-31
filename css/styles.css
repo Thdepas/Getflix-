@@ -1,9 +1,118 @@
+html,
 body {
-    background-color: LightCoral;
+  position: relative;
+  height: 100%;
+  margin: 0px;
+  background-color: LightCoral;
 }
-.coverCarousel {
-    
-    height: 402px;
-    width: 279px;
 
+h1 {
+  font-size: 45px;
 }
+
+h2 {
+  font-size: 25px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*div[class^="col"] {
+  background-color: cornflowerblue;
+  border: 1px solid black;
+}*/
+
+/*div[class^="row"] {
+    background-color: red;
+    border: 1px solid yellow;
+  }*/
+
+.menuLink {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 640;
+}
+
+#search {
+  border: 0px;
+  border-bottom: 2px solid black;
+}
+
+#search:focus {
+  outline: none;
+}
+
+#searchSubmit {
+  visibility: hidden;
+}
+
+.accountLink {
+  font-weight: 650;
+}
+
+.dashboardButton {
+  width: 200px;
+}
+
+.coverCarousel {
+  height: 243px;
+  width: 170px;
+}
+
+.coverMovies {
+  height: 330px;
+  width: 231px;
+}
+
+/*Swiper**********************/
+.swiper-container {
+  width: 96%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Update: Removed the Flex property - IE FIX */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: white;
+  opacity: 0.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --swiper-theme-color: #fff;
+}
+
+.netflix-slider .swiper-wrapper {
+  padding: 20px 0;
+}
+
+.netflix-slider .swiper-slide {
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.netflix-slider .swiper-slide:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.netflix-slider .swiper-slide:first-child:hover {
+  margin: 0 40px;
+}
+
+.netflix-slider .swiper-slide:last-child:hover {
+  margin: 0 -40px;
+}
+/*# sourceMappingURL=styles.css.map */
