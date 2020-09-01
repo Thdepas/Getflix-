@@ -9,7 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="/getflix/css/styles.css" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>N.E.T_P</title>
 </head>
 
@@ -20,9 +20,9 @@ session_start();
         include('/var/www/html/getflix/home/navbar.php');
         
         ?>
-        <div class="row">
+        <div class="row m-5 justify-content-start align-items-center">
             <form action="/getflix/catalogue/catalogue.php" method="get">
-                <select id="genre" name="genre"  onchange="this.form.submit();">
+                <select class="form-control form-control-sm" id="genre" name="genre"  onchange="this.form.submit();">
                     <option value="all">All</option>
                     <?php        
                     $req = $bdd->query('SELECT DISTINCT genre FROM movies ORDER BY genre');
@@ -45,11 +45,11 @@ session_start();
                     ?>
                 </select>
             </form>
-                <a href="/getflix/catalogue/catalogue.php?sort=year&order=<?php echo $order ?>&genre=<?php echo $_GET['genre']?>">Year</a>
-                <a href="/getflix/catalogue/catalogue.php?sort=rating&order=<?php echo $order ?>&genre=<?php echo $_GET['genre']?>">Rating</a>
+                <a href="/getflix/catalogue/catalogue.php?sort=year&order=<?php echo $order ?>&genre=<?php echo $_GET['genre']?>"> &nbsp Year  &nbsp </a>
+                <a href="/getflix/catalogue/catalogue.php?sort=rating&order=<?php echo $order ?>&genre=<?php echo $_GET['genre']?>">Rating  &nbsp </a>
                 <a href="/getflix/catalogue/catalogue.php?sort=title&order=<?php echo $order ?>&genre=<?php echo $_GET['genre']?>">Title</a>
         </div>
-        <div class="row">
+        <div class="row m-2 justify-content-center align-items-center">
         <?php
             $sort = $_GET["sort"];
 
