@@ -2,8 +2,8 @@
 include('/var/www/html/getflix/scripts/status.php');
 ?>
 
-<nav class="navbar navbar-expand-md navbar-light bg-light mb-5">
-        <a href="/getflix/home/home.php" class="navbar-brand" alt="N.E.T_P"><h1>N.E.T_P</h1></a>
+<nav class="navbar navbar-expand-md mb-5">
+        <a href="/getflix/home/home.php" class="navbar-brand netp" alt="N.E.T_P"><h1>N.E.T_P</h1></a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -15,7 +15,7 @@ include('/var/www/html/getflix/scripts/status.php');
             <div class="navbar-nav">
                 <form class="form-inline" action = "/getflix/scripts/search.php" method = "get">
                     <div class="input-group">  
-                        <label for="search"><img src="/getflix/img/icon/search.svg" class="mr-2"></label>
+                        <label for="search"><img src="/getflix/img/icon/search.svg" class="mr-3"></label>
                         <input type="text" id="search" name="search" placeholder="search" required>
                         <input type="submit" id="searchSubmit" value="Search"> 
                     </div>
@@ -26,7 +26,7 @@ include('/var/www/html/getflix/scripts/status.php');
                     echo '
                     <div class="nav-item dropdown accountLink">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                            <img src="/getflix/img/icon/account.svg" class="mr-1" alt="My account">'.$result["firstname"].' '.$result["lastname"].
+                            <img src="/getflix/img/icon/account.svg" class="mr-2" alt="My account">'.$result["firstname"].' '.$result["lastname"].
                         '</a>
                         <div class="dropdown-menu">';
                     switch($status){
