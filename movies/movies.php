@@ -13,6 +13,7 @@ session_start();
 <body>
 <?php
 include("/var/www/html/getflix/scripts/connectdb.php");
+//include('/var/www/html/getflix/scripts/status.php');
 $movieId = $_GET["movieId"];
 $reponse = $bdd->prepare('SELECT * FROM movies WHERE id = :id');
 $reponse->execute(array('id' => $movieId));
@@ -37,9 +38,56 @@ $donnees = $reponse->fetch();
             <div class="row p-2 mt-3 d-flex justify-content-end"><a class='btn btn-dark'  role='button' href='/getflix/home/home.php'>Back</a></div>
         </div>
     </div>
+<?php $reponse->closeCursor();?>
     <div class="row">
         <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12 col-12 p-2">
             <h2>Comments</h2>
+            <?php
+
+            $req = $bdd->prepare('  SELECT comment.id_comment, comment.id_author, DATE_FORMAT(comment.date_comment, "%d/%m/%Y %Hh%i") AS date , comment.id_movie, comment.message, user.id, user.firstname, user.lastname 
+                                    FROM comment
+                                    INNER JOIN user 
+                                        ON comment.id_author=user.id
+                                    WHERE comment.id_movie = :id_movie
+                                    ORDER BY comment.id_comment DESC
+                                    ');
+
+            $req->execute(array('id_movie' => $movieId));
+            while ($data = $req->fetch()) { 
+                echo "  <div class='row justify-content-between'>".
+                            "<div>".htmlspecialchars($data['firstname'])."</div>".
+                            "<div>".htmlspecialchars($data['date']) ."</div>
+                        </div>
+                        <div class='row'>".
+                            "<div>".htmlspecialchars($data['message'])."</div>".
+                        "</div>";
+                        
+                if ($status == "admin") {
+                    echo "  <div class='row'>
+                        <a class='btn btn-dark' role='button' href='/getflix/comment/commentedit.php?id_comment=". $data['id_comment']."&movieId=".$data['id_movie']."'>Edit</a>" .
+                        "<a class='btn btn-dark'  role='button' href='/getflix/comment/commentdelete.php?id_comment=". $data['id_comment']."&movieId=".$data['id_movie']."'>Delete</a>
+                    </div>";
+                } else if ($_SESSION["id"] == $data['id'] && $status != "admin") {
+                    echo "  <div class='row'>
+                    <a class='btn btn-dark' role='button' href='/getflix/comment/commentedit.php?id_comment=". $data['id_comment']."&movieId=".$data['id_movie']."'>Edit</a>" .
+                    "<a class='btn btn-dark'  role='button' href='/getflix/comment/commentdelete.php?id_comment=". $data['id_comment']."&movieId=".$data['id_movie']."'>Delete</a>
+                    </div>";
+                }
+            }
+
+            if ($status == "admin" || $status == "member") {
+                echo '
+                <form action = "/getflix/comment/commentaddscript.php" method = "post">
+                    <p><input type="hidden" id="id_author" name="id_author" value="'. $id .'"></p>
+                    <p><input type="hidden" id="id" name="movieId" value="'. $_GET['movieId'].'"></p>
+                    <p><textarea rows="5" cols="60" id="message" name="message" required></textarea></p>
+                    <p><input type="submit" value="Submit"></p>
+                </form>';
+            }
+        
+            $req->closeCursor();
+
+            ?>
         </div>
     </div>
 </div>

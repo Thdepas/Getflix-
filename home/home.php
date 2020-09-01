@@ -20,54 +20,8 @@ session_start();
     <div class="container-fluid">
         <?php
         include('/var/www/html/getflix/home/navbar.php');
-
-        function makeCarousel($nbrOfCover, $sort, $id)
-        {
-            include("/var/www/html/getflix/scripts/connectdb.php");
-            $sql = 'SELECT id, title FROM movies ORDER BY ' . $sort . ' DESC LIMIT ' . $nbrOfCover;
-            $req = $bdd->prepare($sql);
-            $req->execute();
-            $entryCarousel1 = [];
-            $echoCarousel = "<div id=" . $id . " class='carousel slide my-3' data-interval='false'>
-                                    <div class='carousel-inner row w-100 mx-auto' role='listbox'>";
-            while ($result = $req->fetch()) {
-                array_push($entryCarousel1, $result['id']);
-                if ($entryCarousel1[0] == $result['id']) {
-                    $echoCarousel .= '  <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
-                                                    <a href="/getflix/movies/movies.php?movieId=' . $result['id'] . '" alt="">
-                                                        <img src="/getflix/img/cover/' . $result['id'] . '.jpg" class="img-fluid mx-auto d-block coverCarousel" alt="' . $result['title'] . ' cover">
-                                                    </a>
-                                                </div>';
-                } else {
-                    $echoCarousel .= '  <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
-                                                    <a href="/getflix/movies/movies.php?movieId=' . $result['id'] . '" alt="">
-                                                        <img src="/getflix/img/cover/' . $result['id'] . '.jpg" class="img-fluid mx-auto d-block coverCarousel" alt="' . $result['title'] . ' cover">
-                                                    </a>
-                                                </div>';
-                }
-            }
-            $echoCarousel .=    '</div>
-                                        <a class="carousel-control-prev" href="#' . $id . '" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#' . $id . '" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                        </div>';
-            echo $echoCarousel;
-            $req->closeCursor();
-        }
-        //echo "<h2>Top picks for you</h2>";
-        //makeCarousel(8, "id", "firstCarousel");
-        //echo "<h2>Trending Now</h2>";
-        //makeCarousel(8, "rating", "secondCarousel");
-        //echo "<h2>New releases</h2>";
-        //makeCarousel(8, "year", "thirdCarousel");
-        ?>
-
-        <?php function makeSwiper($nbrOfCover, $sort, $swiperName) {
+ 
+        function makeSwiper($nbrOfCover, $sort, $swiperName) {
             include("/var/www/html/getflix/scripts/connectdb.php");
             $sql = 'SELECT id, title FROM movies ORDER BY ' . $sort . ' DESC LIMIT ' . $nbrOfCover;
             $req = $bdd->prepare($sql);

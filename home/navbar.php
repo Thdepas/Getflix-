@@ -10,7 +10,7 @@ include('/var/www/html/getflix/scripts/status.php');
 
         <div class="collapse navbar-collapse justify-content-between px-5" id="navbarCollapse">
             <div class="navbar-nav menuLink">
-                <a href="/getflix/catalogue/catologue.php" class="nav-item nav-link active">Catalogue</a>
+                <a href="/getflix/catalogue/catalogue.php" class="nav-item nav-link active">Catalogue</a>
             </div>
             <div class="navbar-nav">
                 <form class="form-inline" action = "/getflix/scripts/search.php" method = "post">

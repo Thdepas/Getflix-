@@ -13,10 +13,10 @@ var swiper = new Swiper('.swiper-container', {
         modifier: 1,
       },*/
     //freeMode: true,
-    pagination: {
+    /*pagination: {
         el: '.swiper-pagination',
         clickable: true,
-    },
+    },*/
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
