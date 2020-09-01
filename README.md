@@ -68,6 +68,7 @@ A voir
 * [Boostrap]
 * [PHP]
 * [JS]
+* [Swiper js]
 
 ## Authors
 
