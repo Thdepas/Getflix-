@@ -18,11 +18,7 @@ session_start();
         <?php
         include("/var/www/html/getflix/scripts/connectdb.php");
         include('/var/www/html/getflix/home/navbar.php');
-
-        /*$sort = $_GET['sort'];
-*/
-
-
+        
         ?>
         <div class="row">
             <form action="/getflix/catalogue/catalogue.php" method="get">
@@ -56,7 +52,13 @@ session_start();
         <div class="row">
         <?php
             $sort = $_GET["sort"];
-            $sql = 'SELECT id, title FROM movies WHERE genre = "'. $_GET['genre'] . '" ORDER BY ' . $sort . ' ' . $order;
+
+            if ($_GET['genre']=="all") {
+                $sql = 'SELECT id, title FROM movies ORDER BY ' . $sort . ' ' . $order;
+            } else{ 
+                $sql = 'SELECT id, title FROM movies WHERE genre = "'. $_GET['genre'] . '" ORDER BY ' . $sort . ' ' . $order;
+            }
+            
             $req = $bdd->prepare($sql);
             $req->execute();
             while ($data = $req->fetch()) {

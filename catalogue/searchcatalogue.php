@@ -23,18 +23,14 @@ session_start();
 
         <div class="row">
         <?php
-            $search = $_GET['search']; 
-            $search = htmlspecialchars($search); 
-            $sql = "SELECT * FROM movies
-                    WHERE (`title` LIKE '%".$search."%') OR (`director` LIKE '%".$search."%')";
+            $sql = 'SELECT id, title FROM movies WHERE genre = "'. $_GET['genre'] . '" ORDER BY ' . $sort . ' ' . $order;
             $req = $bdd->prepare($sql);
             $req->execute();
             while ($data = $req->fetch()) {
                 echo '<a href="/getflix/movies/movies.php?movieId=' . $data['id'] . '" alt="'.$data['title'].'">
                     <img src="/getflix/img/cover/'.$data['id'].'.jpg" alt="'.$data['title'].' cover" class="m-2">';
             }
-            $req->closeCursor();
-        ?>
+            $req->closeCursor();?>
         </div>
     </div>
 
@@ -46,5 +42,3 @@ session_start();
 </body>
 
 </html>
-
-

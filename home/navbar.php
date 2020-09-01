@@ -10,10 +10,10 @@ include('/var/www/html/getflix/scripts/status.php');
 
         <div class="collapse navbar-collapse justify-content-between px-5" id="navbarCollapse">
             <div class="navbar-nav menuLink">
-                <a href="/getflix/catalogue/catalogue.php" class="nav-item nav-link active">Catalogue</a>
+                <a href="/getflix/catalogue/catalogue.php?genre=all&sort=year&order=ASC" class="nav-item nav-link active">Catalogue</a>
             </div>
             <div class="navbar-nav">
-                <form class="form-inline" action = "/getflix/scripts/search.php" method = "post">
+                <form class="form-inline" action = "/getflix/scripts/search.php" method = "get">
                     <div class="input-group">  
                         <label for="search"><img src="/getflix/img/icon/search.svg" class="mr-2"></label>
                         <input type="text" id="search" name="search" placeholder="search" required>

@@ -23,9 +23,6 @@ include("/var/www/html/getflix/scripts/connectdb.php");
     <div class="row m-3 justify-content-center">
         <a class="btn btn-dark dashboardButton" href='/getflix/dashboard/movies/dashboardmovies.php?sort=id&order=ASC' role="button">Edit movies database</a>
     </div>
-    <div class="row m-3 justify-content-center">
-        <a class="btn btn-dark dashboardButton" href='/getflix/dashboard/comments/dashboardcomments.php' role="button">Edit comments database</a>
-    </div>
     <div class="row m-5 justify-content-center">
         <a class='btn btn-dark'  role='button' href='/getflix/home/home.php'>Back</a>
     </div>
