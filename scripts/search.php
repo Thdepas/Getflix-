@@ -22,7 +22,7 @@ session_start();
         include('/var/www/html/getflix/home/navbar.php');    
         ?>
 
-        <div class="row">
+        <div class="row m-5 justify-content-start align-items-center">
         <?php
             $search = $_GET['search']; 
             $search = htmlspecialchars($search); 

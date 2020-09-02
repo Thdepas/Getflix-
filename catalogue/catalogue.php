@@ -14,12 +14,13 @@ session_start();
 </head>
 
 <body>
-    <div class="container-fluid">
+    
         <?php
         include("/var/www/html/getflix/scripts/connectdb.php");
         include('/var/www/html/getflix/home/navbar.php');
         
         ?>
+        <div class="container-fluid">
         <div class="row m-5 justify-content-start align-items-center">
             <form action="/getflix/catalogue/catalogue.php" method="get">
                 <select class="form-control form-control-sm" id="genre" name="genre"  onchange="this.form.submit();">

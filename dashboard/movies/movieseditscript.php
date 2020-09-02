@@ -1,6 +1,10 @@
 <?php
+session_start();
 include("/var/www/html/getflix/scripts/edit.php");
-
+include('/var/www/html/getflix/scripts/status.php');
+if ($status != "admin"){
+    header('Location: /getflix/home/home.php');
+}
 if (isset($_POST["title"]) AND isset($_POST["director"]) AND isset($_POST["genre"]) AND isset($_POST["year"])  AND isset($_POST["length"]) AND isset($_POST["synopsis"]) AND isset($_POST["rating"]) AND isset($_POST["trailer"]) ) {
     $table = "movies";
     $array = array(
