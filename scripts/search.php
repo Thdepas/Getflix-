@@ -32,7 +32,7 @@ session_start();
             $req->execute();
             while ($data = $req->fetch()) {
                 echo '<a href="/getflix/movies/movies.php?movieId=' . $data['id'] . '" alt="'.$data['title'].'">
-                    <img src="/getflix/img/cover/'.$data['id'].'.jpg" alt="'.$data['title'].' cover" class="m-2">';
+                    <img src="/getflix/img/cover/'.$data['id'].'.jpg" alt="'.$data['title'].' cover" class="m-2  coverCatalogue"">';
             }
             $req->closeCursor();
         ?>

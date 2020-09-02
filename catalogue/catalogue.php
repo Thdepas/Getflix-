@@ -1,16 +1,5 @@
-<?php
-session_start();
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="/getflix/css/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <title>N.E.T_P</title>
+<?php include("/var/www/html/getflix/home/head.php");?>
+<title>N.E.T_P</title>
 </head>
 
 <body>
@@ -64,7 +53,7 @@ session_start();
             $req->execute();
             while ($data = $req->fetch()) {
                 echo '<a href="/getflix/movies/movies.php?movieId=' . $data['id'] . '" alt="'.$data['title'].'">
-                    <img src="/getflix/img/cover/'.$data['id'].'.jpg" alt="'.$data['title'].' cover" class="m-2">';
+                    <img class="m-2 coverCatalogue" src="/getflix/img/cover/'.$data['id'].'.jpg" alt="'.$data['title'].' cover">';
             }
             $req->closeCursor();?>
         </div>

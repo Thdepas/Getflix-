@@ -190,3 +190,17 @@ a:hover {
   border-color: #00ff00;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(21, 255, 0, 0.6);
 }
+
+.coverCatalogue:hover {
+  -webkit-animation: zoom 0.2s linear forwards;
+}
+
+@-moz-keyframes zoom {
+  0% {
+    -webkit-transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(1.15, 1.15);
+  }
+
+}
