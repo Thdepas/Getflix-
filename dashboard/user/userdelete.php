@@ -10,5 +10,5 @@ $table = "user";
 $id =  htmlspecialchars($_GET["id"]);
 $header ="dashboard/user/dashboarduser.php";
 
-delete($table, $id, $header);
+delete($table, $id, $header, 'id');
 ?>   

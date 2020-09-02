@@ -1,5 +1,5 @@
 <?php
-function edit($table, $array, $header) {
+function edit($table, $array, $header, $idFieldName) {
 include("/var/www/html/getflix/scripts/connectdb.php");
 
 $param="";
@@ -8,7 +8,7 @@ $key = array_keys($array);
         $param.= $key[$i] . "=:" . $key[$i].", ";
 }
 $param.= $key[count($key)-1] . "=:" . $key[count($key)-1];
-$sql = 'UPDATE '.$table.' SET '.$param.'  WHERE id =:id';
+$sql = 'UPDATE '.$table.' SET '.$param.'  WHERE '.$idFieldName.' =:'.$idFieldName;
 $req = $bdd->prepare($sql);
 
 $arrayParam = [];

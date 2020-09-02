@@ -19,7 +19,7 @@ if (isset($_POST["title"]) AND isset($_POST["director"]) AND isset($_POST["genre
         'trailer' => $_POST['trailer'],
         );
     $header ="dashboard/movies/dashboardmovies.php?sort=id&order=ASC";
-    edit($table, $array, $header);
+    edit($table, $array, $header, "id");
 } else {
     echo "Missing informations";
 }

@@ -16,7 +16,7 @@ if (isset($_POST["firstname"]) AND isset($_POST["lastname"]) AND isset($_POST["e
         'status' => $_POST['status']
         );
     $header ="dashboard/user/dashboarduser.php";
-    edit($table, $array, $header);
+    edit($table, $array, $header, 'id');
 } else {
     echo "Missing informations";
 }

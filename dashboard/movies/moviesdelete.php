@@ -10,5 +10,5 @@ $table = "movies";
 $id =  htmlspecialchars($_GET["id"]);
 $header ="dashboard/movies/dashboardmovies.php?sort=id&order=ASC";
 
-delete($table, $id, $header);
+delete($table, $id, $header, 'id');
 ?>   
