@@ -12,7 +12,7 @@
 
 # Project Title
 
-N.E.T_P
+N.E.T_P --> https://netp.becode.go.yj.fr/getflix/index.html
 
 ## Context 
 
@@ -58,7 +58,7 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
 
 ## Deployment
 
-A voir
+PlanetHoster
 
 ## Built With
 
