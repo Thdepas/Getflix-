@@ -18,8 +18,8 @@ session_start();
     <div class="container-fluid">
         
         <?php
-        include("/var/www/html/getflix/scripts/connectdb.php");
-        include('/var/www/html/getflix/home/navbar.php');    
+        include("/home/dusztsuv/public_html/getflix/scripts/connectdb.php");
+        include('/home/dusztsuv/public_html/getflix/home/navbar.php');    
         ?>
 
         <div class="row m-5 justify-content-start align-items-center">
@@ -32,13 +32,13 @@ session_start();
             $req->execute();
             while ($data = $req->fetch()) {
                 echo '<a href="/getflix/movies/movies.php?movieId=' . $data['id'] . '" alt="'.$data['title'].'">
-                    <img src="/getflix/img/cover/'.$data['id'].'.jpg" alt="'.$data['title'].' cover" class="m-2  coverCatalogue"">';
+                    <img src="/getflix/img/cover/'.$data['id'].'.jpg" alt="'.$data['title'].' cover" class="m-2  coverCatalogue""></a>';
             }
             $req->closeCursor();
         ?>
         </div>
     </div>
-
+    <?php include('/home/dusztsuv/public_html/getflix/home/footer.php');?>
     <!--JS Scripts-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

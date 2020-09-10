@@ -1,5 +1,5 @@
 <?php
-include("/var/www/html/getflix/home/head.php");
+include("/home/dusztsuv/public_html/getflix/home/head.php");
 ?>
 
     <title>Welcome to N.E.T_P !</title>
@@ -11,7 +11,7 @@ include("/var/www/html/getflix/home/head.php");
         </div>
         <div class="row m-5 justify-content-center flex-column align-items-center title">
             <div class="row m-2 justify-content-center">
-                <h2>Sign Up</h2>  
+                <h2>Sign In</h2>  
             </div>
             <div class="row m-2 justify-content-center">
                 <form action = "signinscript.php" method = "post">
@@ -22,6 +22,13 @@ include("/var/www/html/getflix/home/head.php");
                     <p><input class="nextButton" type="submit" value="Submit"></p>
                 </form>
             </div>
+            <div class="row mt-4 justify-content-center">
+                <a href="/getflix/sign/signup1.php" alt="Sign Up">New to N.E.T_P? Sign up now.</a>
+            </div>
+            <div class="row justify-content-center">
+                <a href="/getflix/passwordrecovery/passwordrecovery.php" alt="Lost password">Forgot your password? Click here.</a>
+            </div>
+
         </div>
     </div>
 </body>

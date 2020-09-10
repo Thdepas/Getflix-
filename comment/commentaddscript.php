@@ -1,5 +1,5 @@
 <?php
-include("/var/www/html/getflix/scripts/add.php"); 
+include("/home/dusztsuv/public_html/getflix/scripts/add.php"); 
 
 if (isset($_POST["message"]) AND isset($_POST["id_author"]) AND isset($_POST["movieId"])) {
     $table = "comment";

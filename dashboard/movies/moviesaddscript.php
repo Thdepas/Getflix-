@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("/var/www/html/getflix/scripts/add.php"); 
-include('/var/www/html/getflix/scripts/status.php');
+include("/home/dusztsuv/public_html/getflix/scripts/add.php"); 
+include('/home/dusztsuv/public_html/getflix/scripts/status.php');
 if ($status != "admin"){
     header('Location: /getflix/home/home.php');
 }
@@ -11,7 +11,7 @@ if (isset($_POST["title"]) AND isset($_POST["director"]) AND isset($_POST["genre
     $array = array(
         'title' => $_POST['title'],
         'director' => $_POST['director'],
-        'genre' => $_POST['genre'],
+        'genre' => ucfirst(strtolower ($_POST['genre'])),
         'year'=> $_POST['year'],
         'length' => $_POST['length'],
         'synopsis' => $_POST['synopsis'],

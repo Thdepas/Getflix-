@@ -1,6 +1,6 @@
 <?php 
-include("/var/www/html/getflix/home/head.php");
-include('/var/www/html/getflix/scripts/connectdb.php'); 
+include("/home/dusztsuv/public_html/getflix/home/head.php");
+include('/home/dusztsuv/public_html/getflix/scripts/connectdb.php'); 
 ?>
 
    <title>N.E.T_P</title>

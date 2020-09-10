@@ -12,7 +12,6 @@ body {
   height: 100%;
 }
 
-
 h1 {
   font-size: 45px;
 }
@@ -23,6 +22,11 @@ h2 {
 
 a:hover {
   text-decoration: none;
+}
+
+input, textarea, .form-control {
+  background-color: #525252;
+  color: #dadada;
 }
 
 .netp {
@@ -130,6 +134,7 @@ border-radius: 10px;
   border : 1px solid #dadada;
   padding: 15px 25px ;
   }
+
 .nextButton {
   color: #dadada;
   font-weight: 700;
@@ -170,8 +175,6 @@ a:hover {
   line-height: 50px;
   border-radius: 50%;
   text-align: center;
-  
-  
 }
 
 .roundno {
@@ -183,19 +186,39 @@ a:hover {
   border-radius: 50%;
   text-align: center;
   color :  #6F6F6F;
-  
 }
 
-.form-control:focus {
+.form-control:focus, text-area{
+  color : #dadada;
+  background-color: #525252;
   border-color: #00ff00;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(21, 255, 0, 0.6);
 }
 
-.coverCatalogue:hover {
+.coverCatalogue, .noCover {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #373737;
+  color: #dadada;
+  height: 414px !important;
+  width: 270px !important;
+  text-shadow: #00ff00 0px 0px 3px;
+  box-shadow:  0 0 6px #202020;
+}
+
+.noCover {
+    text-align: center;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coverCatalogue:hover, .noCover:hover {
   -webkit-animation: zoom 0.2s linear forwards;
 }
 
-@-moz-keyframes zoom {
+@-webkit-keyframes zoom {
   0% {
     -webkit-transform: scale(1, 1);
   }
@@ -203,4 +226,29 @@ a:hover {
     -webkit-transform: scale(1.15, 1.15);
   }
 
+}
+
+footer {
+  margin-top: 20px;
+  background-color: rgb(22, 22, 22);
+  padding : 20px;
+}
+
+li {
+  display: block !important;
+  list-style-type: none;
+}
+
+footer a{
+  font-size: 13px;
+  color :#575757;
+
+}
+
+.fab {
+  font-size: 18px;
+}
+
+#page {
+  width : 10% !important;
 }

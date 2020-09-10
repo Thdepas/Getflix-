@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-<?php include("/var/www/html/getflix/home/head.php");?>
+<?php include("/home/dusztsuv/public_html/getflix/home/head.php");?>
 
     <title>N.E.T_P</title>
 </head>

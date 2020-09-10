@@ -1,12 +1,10 @@
-<?php include("/var/www/html/getflix/home/head.php");?>
+<?php include("/home/dusztsuv/public_html/getflix/home/head.php");?> 
 <title>N.E.T_P</title>
 </head>
-
 <body>
-    
         <?php
-        include("/var/www/html/getflix/scripts/connectdb.php");
-        include('/var/www/html/getflix/home/navbar.php');
+        include("/home/dusztsuv/public_html/getflix/scripts/connectdb.php");
+        include('/home/dusztsuv/public_html/getflix/home/navbar.php');
         
         ?>
         <div class="container-fluid">
@@ -44,21 +42,22 @@
             $sort = $_GET["sort"];
 
             if ($_GET['genre']=="all") {
-                $sql = 'SELECT id, title FROM movies ORDER BY ' . $sort . ' ' . $order;
+                $sql = 'SELECT id, title FROM movies ORDER BY ' . $sort . ' ' . $order;   
             } else{ 
-                $sql = 'SELECT id, title FROM movies WHERE genre = "'. $_GET['genre'] . '" ORDER BY ' . $sort . ' ' . $order;
+                $sql = 'SELECT id, title FROM movies WHERE genre = "'. $_GET['genre'] . '" ORDER BY ' . $sort . ' ' . $order;  
             }
             
             $req = $bdd->prepare($sql);
             $req->execute();
             while ($data = $req->fetch()) {
                 echo '<a href="/getflix/movies/movies.php?movieId=' . $data['id'] . '" alt="'.$data['title'].'">
-                    <img class="m-2 coverCatalogue" src="/getflix/img/cover/'.$data['id'].'.jpg" alt="'.$data['title'].' cover">';
+                        <img class="m-2 coverCatalogue" src="/getflix/img/cover/'.$data['id'].'.jpg" alt="'.$data['title'].' cover">
+                    </a>';
             }
             $req->closeCursor();?>
         </div>
     </div>
-
+    <?php include('/home/dusztsuv/public_html/getflix/home/footer.php');?>
     <!--JS Scripts-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

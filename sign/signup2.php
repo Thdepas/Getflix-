@@ -1,5 +1,5 @@
 <?php
-include("/var/www/html/getflix/home/head.php");
+include("/home/dusztsuv/public_html/getflix/home/head.php");
 $_SESSION['firstname'] = $_POST['firstname'];
 $_SESSION['lastname'] = $_POST['lastname'];
 ?>
@@ -28,7 +28,10 @@ $_SESSION['lastname'] = $_POST['lastname'];
                         <p><input class="form-control form-control-sm" type="password" id="password" name="password" required></p>
                         <p><label for="name">Confirm Password</label> </p>
                         <p><input class="form-control form-control-sm" type="password" id="confirmPassword" name="confirmPassword" required></p>
+                        <p><input type="checkbox" class="form-check-input" id="newsletter" name ="newsletter" value="isSubscribed">
+                        <label class="form-check-label" for="newsletter">Subscribe to our newsletter !!</label></p>
                         <p><input class="nextButton" type="submit" value="Submit"></p>
+
                     </form> 
                 </div>
             </div>

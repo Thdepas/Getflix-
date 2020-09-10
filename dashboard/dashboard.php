@@ -1,17 +1,17 @@
 <?php
 session_start();
-include("/var/www/html/getflix/scripts/connectdb.php");
-include('/var/www/html/getflix/scripts/status.php');
+include("/home/dusztsuv/public_html/getflix/scripts/connectdb.php");
+include('/home/dusztsuv/public_html/getflix/scripts/status.php');
 if ($status != "admin"){
     header('Location: /getflix/home/home.php');
 }
 ?>
-<?php include("/var/www/html/getflix/home/head.php");?>
+<?php include("/home/dusztsuv/public_html/getflix/home/head.php");?>
 <title>N.E.T_P</title>
 </head>
 <body>
 <div class="container-fluid">
-    <?php include('/var/www/html/getflix/home/navbar.php');?>
+    <?php include('/home/dusztsuv/public_html/getflix/home/navbar.php');?>
     <div class="row m-4 justify-content-center">
         <h2>Dashboard</h2> 
     </div>
@@ -20,6 +20,10 @@ if ($status != "admin"){
     </div>
     <div class="row m-3 justify-content-center">
         <a class="btn btn-dark dashboardButton" href='/getflix/dashboard/movies/dashboardmovies.php?sort=id&order=ASC' role="button">Edit movies database</a>
+    </div>
+
+    <div class="row m-3 justify-content-center">
+        <a class="btn btn-dark dashboardButton" href='/getflix/dashboard/mail/dashboardnewsletter.php' role="button">Newsletter</a>
     </div>
     <div class="row m-5 justify-content-center">
         <a class='btn btn-dark'  role='button' href='/getflix/home/home.php'>Back</a>

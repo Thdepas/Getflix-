@@ -1,14 +1,14 @@
 <?php 
 session_start(); 
 
-// Suppression des variables de session et de la session
+// Session's variables and session deletion
 $_SESSION = array();
 session_destroy();
 
-// Redirection du visiteur 
+// Visitor redirection 
 header('Location: /getflix/home/home.php');
 
-// Suppression des cookies de connexion automatique
+//Automatic cookie deletion 
 //setcookie('login', '');
 //setcookie('pass_hache', '');
 ?>  

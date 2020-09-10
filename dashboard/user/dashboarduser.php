@@ -1,12 +1,11 @@
 <?php
 session_start();
-include("/var/www/html/getflix/scripts/connectdb.php");
-include('/var/www/html/getflix/scripts/status.php');
+include('/home/dusztsuv/public_html/getflix/scripts/status.php');
 if ($status != "admin"){
     header('Location: /getflix/home/home.php');
 }
 ?>
-<?php include("/var/www/html/getflix/home/head.php");?>
+<?php include("/home/dusztsuv/public_html/getflix/home/head.php");?>
     <title>N.E.T_P</title>
 </head>
 <body>
