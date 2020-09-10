@@ -53,7 +53,16 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
 - Display films in carousel
 - Search bar
 - Sort films by title, genre, ...
-- First front try
+- First front 
+- 
+
+
+## Third week
+
+- Password recovery
+- Newsletter 
+- API
+- Comment code
 - 
 
 ## Deployment
@@ -78,9 +87,11 @@ PlanetHoster
 
 ## License
 
+* The Movie Database --> https://www.themoviedb.org/
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Inspiration : www.netflix.com
+* https://openclassrooms.com
+* Steve Griffith Introduction to TheMovieDB API --> https://youtu.be/bpHtxx_wmqw 
+
