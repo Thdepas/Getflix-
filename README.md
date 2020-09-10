@@ -40,8 +40,18 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
      ![figma](https://user-images.githubusercontent.com/66432325/91146263-ef36be00-e6b6-11ea-8144-30c5f2134722.gif)
 
 - Make database
-  - Film db
+  - Comment db
+  - Movies db
   - User db
+  - Newsletter db
+ 
+![Screenshot_2020-09-10 node8-fr n0c com phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716947-ca517480-f35f-11ea-9d3f-8fe32309003d.png) \
+![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix movies phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716943-c9b8de00-f35f-11ea-99f5-5a94542e5b9c.png) \
+![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix comment phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716945-ca517480-f35f-11ea-9564-89a7407521ca.png) \
+![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix user phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716950-caea0b00-f35f-11ea-8ab2-a02fda9c5d2f.png) \
+![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix newsletter phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716951-caea0b00-f35f-11ea-9f07-12ef99403dc1.png)
+  
+  
 - Set up the same docker for every member of the team so we can work together
 - Begin to code all together with "live share" (vs code)
 - User login and differents sessions
@@ -64,12 +74,7 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
 - Newsletter 
 - API
 - Comment code
-- 
-![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix movies phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716943-c9b8de00-f35f-11ea-99f5-5a94542e5b9c.png)
-![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix comment phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716945-ca517480-f35f-11ea-9564-89a7407521ca.png)
-![Screenshot_2020-09-10 node8-fr n0c com phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716947-ca517480-f35f-11ea-9d3f-8fe32309003d.png)
-![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix user phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716950-caea0b00-f35f-11ea-8ab2-a02fda9c5d2f.png)
-![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix newsletter phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716951-caea0b00-f35f-11ea-9f07-12ef99403dc1.png)
+- Presentation
 
 ## Deployment
 
