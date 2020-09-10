@@ -1,10 +1,10 @@
 # Getflix project
 
 - Type of Challenge:  `Consolidation`
-- Duration: `?`
-- Deadline: `?`
+- Duration: `3weeks`
+- Deadline: `11/09/20`
 - Deployment strategy :
-  - ?
+  - Planethoster
 - Team challenge :  Nathalie - Elodie - Thomas - Phuong (N.E.T_P)
   - frontend: 4
   - backend: 4
