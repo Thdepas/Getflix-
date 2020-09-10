@@ -28,6 +28,7 @@ Create a Streaming site in html / css, javascript and php.
 
 Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... The goal is to display a catalog of movies. Spot the similarities between these platforms (navbar, header, search tool, different categories of videos…) See what is cool and what works.
 
+![live_share_test3](https://user-images.githubusercontent.com/66432325/92717065-eead5100-f35f-11ea-94dc-51df9ef73a0a.gif)
 
 
 ## First week
