@@ -54,10 +54,10 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
 - Set up the same docker for every member of the team so we can work together
 - Begin to code all together with "live share" (vs code)
 
-![live_share_test3](https://user-images.githubusercontent.com/66432325/92717065-eead5100-f35f-11ea-94dc-51df9ef73a0a.gif) \
+![live_share_test3](https://user-images.githubusercontent.com/66432325/92717065-eead5100-f35f-11ea-94dc-51df9ef73a0a.gif)
 
 - User login and differents sessions
-- CRUD 
+- CRUD dashboard
 
 
 ## Second week
@@ -65,8 +65,7 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
 - Display films in carousel
 - Search bar
 - Sort films by title, genre, ...
-- First front 
-- 
+- Start front end
 
 
 ## Third week
