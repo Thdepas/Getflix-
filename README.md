@@ -12,7 +12,7 @@
 
 # Project Title
 
-N.E.T_P
+N.E.T_P --> https://netp.becode.go.yj.fr/getflix/index.html
 
 ## Context 
 
@@ -39,13 +39,25 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
      ![figma](https://user-images.githubusercontent.com/66432325/91146263-ef36be00-e6b6-11ea-8144-30c5f2134722.gif)
 
 - Make database
-  - Film db
+  - Comment db
+  - Movies db
   - User db
+  - Newsletter db
+ 
+![Screenshot_2020-09-10 node8-fr n0c com phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716947-ca517480-f35f-11ea-9d3f-8fe32309003d.png) \
+![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix movies phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716943-c9b8de00-f35f-11ea-99f5-5a94542e5b9c.png) \
+![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix comment phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716945-ca517480-f35f-11ea-9564-89a7407521ca.png) \
+![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix user phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716950-caea0b00-f35f-11ea-8ab2-a02fda9c5d2f.png) \
+![Screenshot_2020-09-10 node8-fr n0c com dusztsuv_getflix newsletter phpMyAdmin 5 0 2](https://user-images.githubusercontent.com/66432325/92716951-caea0b00-f35f-11ea-9f07-12ef99403dc1.png)
+  
+  
 - Set up the same docker for every member of the team so we can work together
 - Begin to code all together with "live share" (vs code)
+
+![live_share_test3](https://user-images.githubusercontent.com/66432325/92717065-eead5100-f35f-11ea-94dc-51df9ef73a0a.gif)
+
 - User login and differents sessions
-- CRUD 
-- 
+- CRUD dashboard
 
 
 ## Second week
@@ -53,12 +65,20 @@ Get inspired by Netflix, Amazon Prime Video and other Popcorn Time, Stremio ... 
 - Display films in carousel
 - Search bar
 - Sort films by title, genre, ...
-- First front try
-- 
+- Start front end
+
+
+## Third week
+
+- Password recovery
+- Newsletter 
+- API
+- Comment code
+- Presentation
 
 ## Deployment
 
-A voir
+PlanetHoster
 
 ## Built With
 
@@ -78,9 +98,11 @@ A voir
 
 ## License
 
+* The Movie Database --> https://www.themoviedb.org/
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Inspiration : www.netflix.com
+* https://openclassrooms.com
+* Steve Griffith Introduction to TheMovieDB API --> https://youtu.be/bpHtxx_wmqw 
+
